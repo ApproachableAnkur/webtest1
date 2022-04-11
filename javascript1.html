@@ -1,0 +1,109 @@
+<html>
+<head>
+<title>SimplePrograms</title>
+<script>
+function a1(){
+var a,b,c;
+a=eval(document.f1.t1.value);
+b=eval(document.f1.t2.value);
+c=a+b;
+document.f1.t3.value=c;
+}
+function a2(){
+var p,r,t,s;
+p=eval(document.f1.t4.value);
+r=eval(document.f1.t5.value);
+t=eval(document.f1.t6.value);
+s=p*r*t/100;
+document.f1.t7.value=s;
+}
+function a3(){
+var e,m,c,t,p,d;
+e=eval(document.f1.t8.value);
+m=eval(document.f1.t9.value);
+c=eval(document.f1.t10.value);
+t=e+m+c;
+document.f1.t11.value=t;
+p=t*100/300;
+document.f1.t12.value=p;
+if(p>60)
+{
+ document.f1.t13.value="First";
+}
+else if(p>=50 && p<60)
+{
+document.f1.t13.value="Second";
+}
+else{
+document.f1.t13.value="Fail";
+}
+}
+function a4(){
+var a,b,c,max;
+a=eval(document.f1.t14.value);
+b=eval(document.f1.t15.value);
+c=eval(document.f1.t16.value); 
+max=(a>b && a>c)?(a):((b>c)?b:c)
+document.f1.t17.value=max;
+}
+function a5(){
+var a,b,c,max;
+a=eval(document.f1.t14.value);
+b=eval(document.f1.t15.value);
+c=eval(document.f1.t16.value); 
+min=(a<b && a<c)?(a):((b<c)?b:c);
+document.f1.t17.value=min;
+}
+</script>
+</head>
+<body>
+<form name="f1">
+<center>
+<table>
+<tr>
+<td>
+<table bgcolor=yellow border=2px >
+<caption>Calculater</caption>
+<tr><td>FirstNo</td><td><input type="text" name="t1"></td></tr>
+<tr><td>SecondNo</td><td><input type="text" name="t2"></td></tr>
+<tr><td>Results</td><td><input type="text" name="t3"></td></tr>
+<tr><td colspan=2 align=center><input type="button" value="add" onclick="a1()"></td></tr>
+</table>
+</td>
+<td>
+<table bgcolor=gray border=2px>
+<caption>SimpleInterest</caption>
+<tr><td>Principal</td><td><input type="text" name="t4"></td></tr>
+<tr><td>RateOfIntrest%</td><td><input type="text" name="t5"></td></tr>
+<tr><td>Time</td><td><input type="text" name="t6"></td></tr>
+<tr><td>SimpleInterest</td><td><input type="text" name="t7"></td></tr>
+<tr><td colspan=2 align=center><input type="button" value="Calculate" onclick="a2()"></td></tr>
+</table>
+</td>
+<td>
+<table bgcolor=orange border=2px>
+<caption>StudentPercentage</caption>
+<tr><td>English(100)</td><td><input type="text" name="t8"></td></tr>
+<tr><td>Maths(100)</td><td><input type="text" name="t9"></td></tr>
+<tr><td>Computer(100)</td><td><input type="text" name="t10"></td></tr>
+<tr><td>TotalMarks</td><td><input type="text" name="t11"></td></tr>
+<tr><td>Percentage%</td><td><input type="text" name="t12"></td></tr>
+<tr><td>Devision</td><td><input type="text" name="t13"></td></tr>
+<tr><td colspan=2 align=center><input type="button" value="Calculate" onclick="a3()"></td></tr>
+</table>
+</td>
+<td>
+<table bgcolor=skyblue border=2px>
+<caption>Max/Min</caption>
+<tr><td>FirstNo</td><td><input type="text" name="t14"></td></tr>
+<tr><td>SecondNo</td><td><input type="text" name="t15"></td></tr>
+<tr><td>ThirdNo</td><td><input type="text" name="t16"></td></tr>
+<tr><td>Result... </td><td><input type="text" name="t17"></td></tr>
+<tr><td colspan=2 align=center><input type="button" value="Max" onclick="a4()"><input type="button" value="Min" onclick="a5()"></td></tr>
+</table>
+</td>
+</tr>
+</table>
+</form>
+</body>
+</html>
